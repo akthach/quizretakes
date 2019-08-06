@@ -1,0 +1,432 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<retakes>
+	
+  <retake>
+    <id>1</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>1</month> <!-- 01..12 -->
+      <day>29</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+
+  <retake>
+    <id>2</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>1</month> <!-- 01..12 -->
+      <day>30</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>3</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>1</month> <!-- 01..12 -->
+      <day>31</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+
+  <retake>
+    <id>4</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>5</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>5</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>6</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>6</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>7</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>7</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>12</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>8</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>13</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>9</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>14</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+<!-- Add more retakes below ... the id should be unique and increment with date -->
+  <retake>
+    <id>10</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>19</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>11</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>20</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>12</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>21</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>13</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>26</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>14</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>27</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>15</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>2</month> <!-- 01..12 -->
+      <day>28</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>16</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>3</month> <!-- 01..12 -->
+      <day>5</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>17</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>3</month> <!-- 01..12 -->
+      <day>6</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>18</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>3</month> <!-- 01..12 -->
+      <day>7</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>19</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>3</month> <!-- 01..12 -->
+      <day>19</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>20</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>3</month> <!-- 01..12 -->
+      <day>20</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>21</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>3</month> <!-- 01..12 -->
+      <day>21</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>22</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>3</month> <!-- 01..12 -->
+      <day>26</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>23</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>3</month> <!-- 01..12 -->
+      <day>27</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>24</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>3</month> <!-- 01..12 -->
+      <day>28</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>25</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>2</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>26</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>3</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>27</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>4</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>28</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>9</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>29</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>10</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>30</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>11</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>31</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>16</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>32</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>17</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>33</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>18</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>34</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>23</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>35</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>24</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>36</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>25</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>37</id>
+    <location>EB 5321</location> <!-- TA's office hours -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>4</month> <!-- 01..12 -->
+      <day>30</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>38</id>
+    <location>EB 4430</location> <!-- Prof's office hours -->
+    <dateGiven> <!-- Same format as in quiz-orig.xml -->
+      <month>5</month> <!-- 01..12 -->
+      <day>1</day> <!-- 1..31 -->
+      <hour>15</hour> <!-- 0..23 -->
+      <minute>30</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+  
+  <retake>
+    <id>39</id>
+    <location>Buchanan Hall</location> <!-- Before class -->
+    <dateGiven> <!-- Same format as in quizzes.xml -->
+      <month>5</month> <!-- 01..12 -->
+      <day>2</day> <!-- 1..31 -->
+      <hour>10</hour> <!-- 0..23 -->
+      <minute>00</minute> <!--  0-59 -->
+    </dateGiven>
+  </retake>
+</retakes>
