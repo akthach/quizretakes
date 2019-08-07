@@ -15,9 +15,9 @@ import org.mockito.stubbing.Answer;
 @RunWith(MockitoJUnitRunner.class)
 public class quizschedTest {
 
-	private quizzes quizList;
+	private quizzes quizList = new quizzes();
 
-	private retakes retakesList;
+	private retakes retakesList = new retakes();
 
 	private courseBean course;
 
@@ -25,7 +25,6 @@ public class quizschedTest {
 	private PrintStream printStream;
 
 	private String output;
-
 
 
 	@Before
@@ -52,37 +51,80 @@ public class quizschedTest {
 		}).when(printStream).print(Mockito.anyString());
 	}
 
-	@Test
-	public void testPrintCourseTitle() throws Exception {
-		String title = "CS101";
-		course = new courseBean("1", title, "120min", LocalDate.now(), LocalDate.now(), "Mason");
-		retakesList = new retakes();
+	public static retakeBean createRetakeBeanFromNow(int days) {
+		LocalDate date = LocalDate.now().plusDays(days);
+		return new retakeBean(1, "Mason", date.getMonthValue(), date.getDayOfMonth(), 0, 0);
+	}
 
-		quizsched.printQuizScheduleForm(quizList, retakesList, course);
-		Assert.assertTrue(output.contains("GMU quiz retake scheduler for class " + title));
+	public static String createDateString(LocalDate day) {
+		return day.getDayOfWeek() + ", " + day.getMonth() + " " + day.getDayOfMonth();
 	}
 	
 	@Test
-	public void testPrintNullCourseTitle() throws Exception {
-		String title = null;
-		course = new courseBean("1", title, "120min", LocalDate.now(), LocalDate.now(), "Mason");
-		retakesList = new retakes();
-
+	public void testPrintRetakeTimes() {
+		course = new courseBean("1", "CS101", "120min", LocalDate.now(), LocalDate.now(), "Nguyen");		
 		quizsched.printQuizScheduleForm(quizList, retakesList, course);
-		Assert.assertTrue(output.contains("GMU quiz retake scheduler for class "));
+		Assert.assertTrue(output.contains("Currently scheduling quizzes for the next two weeks, until " + createDateString(LocalDate.now().plusDays(14))));
 	}
 	
 	@Test
-	public void testPrintInfo() throws Exception {
+	public void testPrintReTakeQuizes() {
+		
+		output = "";
 		course = new courseBean("1", "CS101", "120min", LocalDate.now(), LocalDate.now(), "Mason");
-		retakesList = new retakes();
-		quizsched.printQuizScheduleForm(quizList, retakesList, course);
-		Assert.assertTrue(output.contains("You can sign up for quiz retakes within the next two weeks."));
-		Assert.assertTrue(output.contains("Enter your name (as it appears on the class roster),"));
-		Assert.assertTrue(output.contains("then select which date, time, and quiz you wish to retake from the following list."));
-		Assert.assertTrue(output.contains(LocalDate.now().getDayOfWeek().toString()));
-		Assert.assertTrue(output.contains(LocalDate.now().getMonth().toString()));
-		Assert.assertTrue(output.contains(LocalDate.now().getDayOfMonth() + ""));
-	}
+		retakeBean valid = createRetakeBeanFromNow(7);
+		retakesList.addRetake(valid);
+		retakeBean next30Day = createRetakeBeanFromNow(30);
+		retakesList.addRetake(next30Day);
+		retakeBean pass15Day = createRetakeBeanFromNow(-15);
+		retakesList.addRetake(pass15Day);
 
+		quizsched.printQuizScheduleForm(quizList, retakesList, course);
+		Assert.assertTrue(output.contains("RETAKE: " + createDateString(valid.getDate())));
+		Assert.assertFalse(output.contains("RETAKE: " + createDateString(next30Day.getDate())));
+		Assert.assertFalse(output.contains("RETAKE: " + createDateString(pass15Day.getDate())));
+
+	}
+	
+	@Test
+	public void testPrintSkipWeek() {
+		
+		output = "";
+		course = new courseBean("1", "CS101", "120min", LocalDate.now().plusDays(3), LocalDate.now().plusDays(10), "Mason");
+		retakeBean next7day = createRetakeBeanFromNow(7);
+		retakesList.addRetake(next7day);
+		retakeBean next20Day = createRetakeBeanFromNow(20);
+		retakesList.addRetake(next20Day);
+		retakeBean next30Day = createRetakeBeanFromNow(30);
+		retakesList.addRetake(next30Day);
+		retakeBean pass15Day = createRetakeBeanFromNow(-15);
+		retakesList.addRetake(pass15Day);
+
+		quizsched.printQuizScheduleForm(quizList, retakesList, course);
+		Assert.assertFalse(output.contains("RETAKE: " + createDateString(next7day.getDate())));
+		Assert.assertTrue(output.contains("RETAKE: " + createDateString(next20Day.getDate())));
+		Assert.assertFalse(output.contains("RETAKE: " + createDateString(next30Day.getDate())));
+		Assert.assertFalse(output.contains("RETAKE: " + createDateString(pass15Day.getDate())));
+	}
+	
+	@Test
+	public void testPrintSkipWeekMessage() {
+		output = "";
+		course = new courseBean("1", "CS101", "120min", LocalDate.now().plusDays(0), LocalDate.now().plusDays(7), "Mason");
+		retakeBean next5day = createRetakeBeanFromNow(5);
+		retakesList.addRetake(next5day);
+		quizsched.printQuizScheduleForm(quizList, retakesList, course);
+		Assert.assertTrue(output.contains("Skipping a week, no quiz or retakes."));
+	}
+	
+	@Test
+	public void testTryToRetakeQuizDuringSkipWeek() {
+		output = "";
+		course = new courseBean("1", "CS101", "120min", LocalDate.now().plusDays(7), LocalDate.now().plusDays(14), "Mason");
+		retakeBean next8day = createRetakeBeanFromNow(8);
+		retakesList.addRetake(next8day);
+		quizsched.printQuizScheduleForm(quizList, retakesList, course);
+		Assert.assertTrue(output.contains("Currently scheduling quizzes for the next two weeks, until " + createDateString(LocalDate.now().plusDays(3*7))));
+		Assert.assertTrue(output.contains("Skipping a week, no quiz or retakes."));
+	}
 }
