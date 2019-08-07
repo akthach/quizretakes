@@ -53,13 +53,36 @@ public class quizschedTest {
 	}
 
 	@Test
-	public void testPrintQuizScheduleForm() throws Exception {
+	public void testPrintCourseTitle() throws Exception {
 		String title = "CS101";
 		course = new courseBean("1", title, "120min", LocalDate.now(), LocalDate.now(), "Mason");
 		retakesList = new retakes();
 
 		quizsched.printQuizScheduleForm(quizList, retakesList, course);
 		Assert.assertTrue(output.contains("GMU quiz retake scheduler for class " + title));
+	}
+	
+	@Test
+	public void testPrintNullCourseTitle() throws Exception {
+		String title = null;
+		course = new courseBean("1", title, "120min", LocalDate.now(), LocalDate.now(), "Mason");
+		retakesList = new retakes();
+
+		quizsched.printQuizScheduleForm(quizList, retakesList, course);
+		Assert.assertTrue(output.contains("GMU quiz retake scheduler for class "));
+	}
+	
+	@Test
+	public void testPrintInfo() throws Exception {
+		course = new courseBean("1", "CS101", "120min", LocalDate.now(), LocalDate.now(), "Mason");
+		retakesList = new retakes();
+		quizsched.printQuizScheduleForm(quizList, retakesList, course);
+		Assert.assertTrue(output.contains("You can sign up for quiz retakes within the next two weeks."));
+		Assert.assertTrue(output.contains("Enter your name (as it appears on the class roster),"));
+		Assert.assertTrue(output.contains("then select which date, time, and quiz you wish to retake from the following list."));
+		Assert.assertTrue(output.contains(LocalDate.now().getDayOfWeek().toString()));
+		Assert.assertTrue(output.contains(LocalDate.now().getMonth().toString()));
+		Assert.assertTrue(output.contains(LocalDate.now().getDayOfMonth() + ""));
 	}
 
 }
