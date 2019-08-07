@@ -22,7 +22,7 @@ repositories {
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
-	runtime 'org.apache.tomcat:tomcat-catalina:7.0.94'
+	runtime 'org.apache.tomcat:tomcat-catalina:8.5.43'
 	
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
